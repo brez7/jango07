@@ -1,0 +1,239 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block title %}x{% endblock %}
+{% block meta_description %}x{% endblock %}
+
+
+
+{% block content %}
+<body class="projects-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href=" {% static 'index.html' %} " class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src=" {% static 'img/logo.png' %} " alt=""> -->
+        <h1 class="sitename">UpConstruction</h1> <span>.</span>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href=" {% static 'index.html' %} ">Home</a></li>
+          <li><a href=" {% static 'about.html' %} ">About</a></li>
+          <li><a href=" {% static 'services.html' %} ">Services</a></li>
+          <li><a href=" {% static 'projects.html' %} " class="active">Projects</a></li>
+          <li><a href=" {% static 'blog.html' %} ">Blog</a></li>
+          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Dropdown 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li>
+          <li><a href=" {% static 'contact.html' %} ">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade" style="background-image: url( {% static 'img/page-title-bg.jpg' %} );">
+      <div class="container position-relative">
+        <h1>Projects</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href=" {% static 'index.html' %} ">Home</a></li>
+            <li class="current">Projects</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-remodeling">Remodeling</li>
+            <li data-filter=".filter-construction">Construction</li>
+            <li data-filter=".filter-repairs">Repairs</li>
+            <li data-filter=".filter-design">Design</li>
+          </ul><!-- End Portfolio Filters -->
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-remodeling">
+              <div class="portfolio-content h-100">
+                <img src=" {% static 'img/projects/remodeling-1.jpg' %} " class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>App 1</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href=" {% static 'img/projects/remodeling-1.jpg' %} " title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href=" {% static 'project-details.html' %} " title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-construction">
+              <div class="portfolio-content h-100">
+                <img src=" {% static 'img/projects/construction-1.jpg' %} " class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Product 1</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href=" {% static 'img/projects/construction-1.jpg' %} " title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href=" {% static 'project-details.html' %} " title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-repairs">
+              <div class="portfolio-content h-100">
+                <img src=" {% static 'img/projects/repairs-1.jpg' %} " class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Branding 1</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href=" {% static 'img/projects/repairs-1.jpg' %} " title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href=" {% static 'project-details.html' %} " title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-design">
+              <div class="portfolio-content h-100">
+                <img src=" {% static 'img/projects/design-1.jpg' %} " class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Books 1</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href=" {% static 'img/projects/design-1.jpg' %} " title="Branding 1" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href=" {% static 'project-details.html' %} " title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-remodeling">
+              <div class="portfolio-content h-100">
+                <img src=" {% static 'img/projects/remodeling-2.jpg' %} " class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>App 2</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href=" {% static 'img/projects/remodeling-2.jpg' %} " title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href=" {% static 'project-details.html' %} " title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-construction">
+              <div class="portfolio-content h-100">
+                <img src=" {% static 'img/projects/construction-2.jpg' %} " class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Product 2</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href=" {% static 'img/projects/construction-2.jpg' %} " title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href=" {% static 'project-details.html' %} " title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-repairs">
+              <div class="portfolio-content h-100">
+                <img src=" {% static 'img/projects/repairs-2.jpg' %} " class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Branding 2</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href=" {% static 'img/projects/repairs-2.jpg' %} " title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href=" {% static 'project-details.html' %} " title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-design">
+              <div class="portfolio-content h-100">
+                <img src=" {% static 'img/projects/design-2.jpg' %} " class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Books 2</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href=" {% static 'img/projects/design-2.jpg' %} " title="Branding 2" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href=" {% static 'project-details.html' %} " title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-remodeling">
+              <div class="portfolio-content h-100">
+                <img src=" {% static 'img/projects/remodeling-3.jpg' %} " class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>App 3</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href=" {% static 'img/projects/remodeling-3.jpg' %} " title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href=" {% static 'project-details.html' %} " title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-construction">
+              <div class="portfolio-content h-100">
+                <img src=" {% static 'img/projects/construction-3.jpg' %} " class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Product 3</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href=" {% static 'img/projects/construction-3.jpg' %} " title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href=" {% static 'project-details.html' %} " title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-repairs">
+              <div class="portfolio-content h-100">
+                <img src=" {% static 'img/projects/repairs-3.jpg' %} " class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Branding 3</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href=" {% static 'img/projects/repairs-3.jpg' %} " title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href=" {% static 'project-details.html' %} " title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-design">
+              <div class="portfolio-content h-100">
+                <img src=" {% static 'img/projects/design-3.jpg' %} " class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Books 3</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href=" {% static 'img/projects/design-3.jpg' %} " title="Branding 3" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href=" {% static 'project-details.html' %} " title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+          </div><!-- End Portfolio Container -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Projects Section -->
+
+  </main>
+
+ 
+{% endblock %}
