@@ -64,7 +64,8 @@
         <nav id="navmenu" class="navmenu">
           <ul>
             <li><a href="{% url 'index' %}" class="{% if request.path == '/' %}active{% endif %}">Home</a></li>
-            <li><a href="about">About</a></li>
+            <li><a href="https://order.online/business/ElPuebloMexicanFood-15024?utm_source=sdk&visitorId=18fa7774ba5908cbc">Order Now</a></li>
+            <li><a href="">About</a></li>
             <li><a href="services">Services</a></li>
             <li><a href="{% url 'menu' %}" class="{% if request.path == '/menu/' %}active{% endif %}">Menu</a></li>
             <li><a href="{% url 'blog' %}" class="{% if request.path == '/blog/' %}active{% endif %}">Articles</a></li>
@@ -100,9 +101,15 @@
       </div>
     </header>
         {% block content %}{% endblock %}
- 
+              <iframe src="https://storage.googleapis.com/maps-solutions-k5o516gwgl/locator-plus/0cjw/locator-plus.html"
+  width="100%" height="750px"
+  style="border:0;"
+  loading="lazy">
+</iframe>
     <footer id="footer" class="footer">
+
       <div class="container footer-top">
+
         <div class="row gy-4">
           <div class="col-lg-4 col-md-6 footer-about">
             <a href="index" class="logo d-flex align-items-center">

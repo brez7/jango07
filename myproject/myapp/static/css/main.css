@@ -22,9 +22,10 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #364d59; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #52565e; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #feb900; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #ff0000; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --contrast-color: #ffffff; /* The contrast color is used for elements when the background color is one of the heading, accent, or default colors. Its purpose is to ensure proper contrast and readability when placed over these more dominant colors */
 }
+
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
@@ -32,7 +33,7 @@
   --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #feb900; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #fe0000; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Smooth scroll */
@@ -2144,6 +2145,7 @@ section,
 
 .blog-posts .post-img img {
   transition: 0.5s;
+  border-radius: 15px;
 }
 
 .blog-posts .post-date {
